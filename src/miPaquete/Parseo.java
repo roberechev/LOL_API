@@ -12,6 +12,7 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 
 public class Parseo {
+	//api_key api LOL
 	String api_key = "?api_key=RGAPI-084ef7e9-b2f0-4641-85a6-b0f1cc328169";
 
 	public String pasarNombreInvocador(String nombreInvocador) {

@@ -1,6 +1,8 @@
 package miPaquete;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.Scanner;
 
 public class main {
@@ -16,6 +18,10 @@ public class main {
 		System.out.println(miID);
 		String contenidoaParsearConMiID = pa.sacarContenidoID(miID);
 		ArrayList<Campeon> campeones = pa.parseoFinalDatos(contenidoaParsearConMiID);
+		
+		//Ordenamos el array de campeones por la maestria, y ponemos reversed para que sea descendente
+		Collections.sort(campeones, Comparator.comparing(Campeon::getMaestria).reversed());
+		
 		for (Campeon campeon : campeones) {
 			String var = "";
 			if (campeon.getCofre().equalsIgnoreCase("false")) {
@@ -23,7 +29,7 @@ public class main {
 			} else {
 				var = "SI";
 			}
-			System.out.println("Nombre: " + pci.personaje(Integer.parseInt(campeon.getNombre())) + ", Maestria: "
+			System.out.println(pci.personaje(Integer.parseInt(campeon.getNombre())) + ", Maestria: "
 					+ campeon.getMaestria() + ", " + campeon.getPuntos() + " puntos, y cofre: " + var);
 		}
 	}

@@ -12,7 +12,7 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 
 public class Parseo {
-	String api_key = "?api_key=RGAPI-e7f7d4b9-35ff-42f1-a49e-8107fb66be53";
+	String api_key = "?api_key=RGAPI-084ef7e9-b2f0-4641-85a6-b0f1cc328169";
 
 	public String pasarNombreInvocador(String nombreInvocador) {
 		String urlInicial = "https://euw1.api.riotgames.com/lol/summoner/v4/summoners/by-name/" + nombreInvocador
